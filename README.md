@@ -1,5 +1,10 @@
 # lit-element-project
 
+### 安装依赖
+```
+npm install
+```
+
 ### 本地调试
 ```
 npm run dev
