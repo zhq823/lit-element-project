@@ -1,15 +1,14 @@
 'use strict'
-const pkg = require('./package.json');
-const libraryName = pkg.name;
-const outputFile = libraryName + '.min.js';
-const { resolve } = require("path")
+const { resolve } = require("path");
+const { name: libraryName } = require('./package.json');
+const outputFile = libraryName + 'min.js';
 
 module.exports = {
     mode: 'production',
     entry: './src/index.js',
     output:{
-        path: __dirname + '/lib',
         filename: outputFile, // '[name].js'
+        path: resolve(__dirname, 'lib'),
         libraryTarget: 'umd',
     },
     resolve: {
@@ -36,6 +35,5 @@ module.exports = {
                 }
             }
         ]
-    },
-    devtool: 'source-map'
+    }
 }

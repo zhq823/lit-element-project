@@ -12,6 +12,8 @@ class LitElementProject {
     }
 }
 
+LitElementProject.install()
+
 export {
     LitElementProject as default,
     LitElementProject
