@@ -1,11 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
 const { name: libraryName } = require('./package.json');
-const outputFile = libraryName + '.js';
+const outputFile = `${libraryName}.js`;
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: './examples/main.js',
     output: {
         filename: outputFile,
         path: resolve(__dirname, 'dist')
@@ -18,7 +18,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html'
+            template: './public/index.html'
         })
     ],
     // 只会在内存编译打包，不会有任何输出

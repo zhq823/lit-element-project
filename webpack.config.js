@@ -1,11 +1,11 @@
 'use strict'
 const { resolve } = require("path");
 const { name: libraryName } = require('./package.json');
-const outputFile = libraryName + 'min.js';
+const outputFile = `${libraryName}.min.js`;
 
 module.exports = {
     mode: 'production',
-    entry: './src/index.js',
+    entry: './packages/index.js',
     output:{
         filename: outputFile, // '[name].js'
         path: resolve(__dirname, 'lib'),
@@ -13,7 +13,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "@": resolve(__dirname, './src')
+            "@": resolve(__dirname, './packages')
         }
     },
     module: {
