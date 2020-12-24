@@ -1,11 +1,6 @@
 # lit-element-project
 
-### 打包调试
-```
-npm run build
-```
-
-### 本地测试
+### 本地调试
 ```
 npm run dev
 ```

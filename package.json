@@ -6,7 +6,6 @@
   "main": "lib/lit-element-project.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config webpack.dev.conf.js",
-    "build": "rimraf dist && webpack -w --mode=production --config webpack.dev.conf.js",
     "lib": "rimraf lib && webpack -w --mode=production --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
