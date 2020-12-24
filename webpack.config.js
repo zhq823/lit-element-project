@@ -7,7 +7,7 @@ module.exports = {
     mode: 'production',
     entry: './packages/index.js',
     output:{
-        filename: outputFile, // '[name].js'
+        filename: outputFile,
         path: resolve(__dirname, 'lib'),
         libraryTarget: 'umd',
     },
@@ -24,10 +24,7 @@ module.exports = {
                 loader: "babel-loader",
                 options: {
                     presets: [[
-                        "@babel/preset-env",
-                        // {
-                        //     useBuiltIns: "usage"
-                        // }
+                        "@babel/preset-env"
                     ]],
                     plugins: [
                         "@babel/plugin-proposal-class-properties"
